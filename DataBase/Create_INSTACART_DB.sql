@@ -17,8 +17,10 @@ CREATE TABLE CUSTOMER
 
 PRIMARY KEY   (Customer_ID),
 UNIQUE (Email,  phoneNumber));
-INSERT INTO Customer VALUES (111111,'John','Smith','halsowadi1@gmail.com',1234, 313,'1965-01-09','731 Fondren, Houston TX',5);
-
+INSERT INTO Customer VALUES (1,'John','Smith','halsowadi1@gmail.com',1234, 313,'1965-01-02','731 Fondren, Houston TX',5);
+INSERT INTO Customer VALUES (2,'Joe','Johnson','halsowadi@gmail.com',1233, 313,'1965-05-03','731 Joy st, Ann Arbor MI',1);
+INSERT INTO Customer VALUES (3,'Hussein','Alsowadi','dalsowadi@gmail.com',1222, 313,'1999-01-09','73132 Katherine, Canton MI',1);
+INSERT INTO Customer VALUES (4,'Joe','Johnson','alsowadi@gmail.com',1233, 313,'1965-01-09','73144 Katherine, Canton MI',1);
 CREATE TABLE PRODUCT
 ( Product_ID	 	 INT 			  	NOT NULL,
   Product_type	  	 varchar(30),
@@ -33,8 +35,11 @@ CREATE TABLE PRODUCT
   
 PRIMARY KEY   (Product_ID),
 UNIQUE (serialnumber));
-
-
+INSERT INTO PRODUCT VALUES (1,'Soap',1,'Dove Soap Bar ','soap stuff, chemicals, something that smells good', 2,1111, 0, 3,1.5);
+INSERT INTO PRODUCT VALUES (2,'Soap',1,'Axe Soap Bar ','soap stuff, chemicals, something that smells good', 2,2222, 0, 3,1.5);
+INSERT INTO PRODUCT VALUES (3,'Soap',1,'Johnson&Johnson Soap Bar ','soap stuff, chemicals, something that smells good', 4,3333, 0, 3,4.5);
+INSERT INTO PRODUCT VALUES (4,'Food',1,'Lays Chips','pototeos, GMOS, salt, corn, startch', 40,4444, 0, 1,5);
+INSERT INTO PRODUCT VALUES (5,'Food',1,'Sun Chips','pototeos, GMOS, salt, corn, startch', 35,5555, 0, 1,5);
 CREATE TABLE CART
 ( Cart_ID			int				  NOT NULL,
   Customer_IDC	  	INT 			  NOT NULL,
@@ -46,6 +51,8 @@ CREATE TABLE CART
   
 PRIMARY KEY   (Cart_ID), 
 FOREIGN KEY (Customer_IDC) REFERENCES CUSTOMER (Customer_ID));
+
+
 
 CREATE TABLE CHECKOUT
 ( RECPIT_ID			int				  NOT NULL,
