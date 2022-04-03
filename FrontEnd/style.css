@@ -11,3 +11,131 @@
     padding-left: 50px;
     padding-right: 50px;
 }
+
+
+/* Eryani */
+
+/* adds */
+.brand{
+    width:100%;
+    background:silver;
+    display:flex;
+    align-content: center;
+    max-height: 35px;            
+}
+.brand > img{
+    margin-left:5px;
+    max-height:40px;
+    width:auto;            
+}
+.mylabel{
+    border-left:1px solid #fafafa;
+    border-bottom:black;
+    border-bottom:1px solid #fafafa;
+    height: 90px;
+    
+}
+.mylabel > a{
+    color:black;
+}
+.mylabel > a > p:first-of-type{
+    font-size:9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    line-height: 14px;        /* fallback */
+    max-height: 14px;       /* fallback */            
+    margin: 0;            
+    text-align:center;            
+}
+.mylabel > a > p:last-of-type{
+    font-size:12px;
+    overflow: hidden;
+    margin: 0;            
+    text-align:center;
+    font-weight: bold;
+}        
+.discount{
+    position: absolute;
+    color: white;
+    background: #006666;
+    border-radius: 0;
+    left:5px;
+    top:5px;
+    padding-left:3px;
+    padding-right:3px;
+}  
+
+
+
+/* #form-input{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+}
+
+#top-conitnar{
+    position: absolute;
+    width: 60%;
+}
+
+.form-group{
+    width: 600PX;
+    padding: 1%;
+} */
+
+
+
+#ad1{
+position: relative;
+width: 22%;
+left: 150px;
+ 
+}
+#ad2{
+    position: relative;
+    width: 90%;
+    left: 11px;
+     
+    }
+
+#ad4{
+  position: absolute;
+  top: 10%;
+  right: 16%;
+  width: 15%;
+}
+
+/* .cart{
+   position: absolute;
+   top:40px;
+   right: 40px;
+} */
+
+/* cart */
+
+/* .container {
+    max-width: 960px;
+  }
+   */
+.search-box{
+    position: relative;
+    width: 1000px;
+}
+
+  .lh-condensed { 
+      line-height: 1.25; 
+    }
+
+  .product-image{
+      position: relative;
+      right: 15%;
+  }
