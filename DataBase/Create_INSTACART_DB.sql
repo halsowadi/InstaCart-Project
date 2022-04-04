@@ -42,7 +42,7 @@ CREATE TABLE PRODUCT
   
 PRIMARY KEY   (Product_ID),
 UNIQUE (serialnumber));
-INSERT INTO PRODUCT VALUES (1,'Soap',1,'Dove Soap Bar ','soap stuff, chemicals, something that smells good', 2,1111, 0, 3,1.5);
+INSERT INTO PRODUCT VALUES (1,'Soap',1,'Dove Soap Bar','soap stuff, chemicals, something that smells good', 2,1111, 0, 3,1.5);
 INSERT INTO PRODUCT VALUES (2,'Soap',1,'Axe Soap Bar ','soap stuff, chemicals, something that smells good', 2,2222, 0, 3,1.5);
 INSERT INTO PRODUCT VALUES (3,'Soap',1,'Johnson&Johnson Soap Bar ','soap stuff, chemicals, something that smells good', 4,3333, 0, 3,4.5);
 INSERT INTO PRODUCT VALUES (4,'Food',1,'Lays Chips','pototeos, GMOS, salt, corn, startch', 40,4444, 0, 1,5);
@@ -58,10 +58,10 @@ CREATE TABLE CART
   
 PRIMARY KEY   (Cart_ID), 
 FOREIGN KEY (Customer_IDC) REFERENCES Accounts (Master_ID));
-INSERT INTO CART VALUES ('1','1',  '2', false, false);
-INSERT INTO CART VALUES ('2','2',  '2', false, false);
-INSERT INTO CART VALUES ('3','3',  '2', false, false);
-INSERT INTO CART VALUES ('4','4',  '2', false, false);
+INSERT INTO CART VALUES (1,1,  2, false, false);
+INSERT INTO CART VALUES (2,2,  2, false, false);
+INSERT INTO CART VALUES (3,3,  2, false, false);
+INSERT INTO CART VALUES (4,4,  2, false, false);
 
 
 CREATE TABLE CHECKOUT
@@ -75,15 +75,21 @@ CREATE TABLE CHECKOUT
   
 PRIMARY KEY   (RECPIT_ID), 
 FOREIGN KEY (RECPIT_ID) REFERENCES CART (Cart_ID));
+INSERT INTO CHECKOUT VALUES (1, '4354 katherine st Ypsilanti MI 48187', 1, 2, 3, true, false);
+INSERT INTO CHECKOUT VALUES (2, '333 State st Ypsilanti MI 48187', 1, 2, 3, true, false);
+INSERT INTO CHECKOUT VALUES (3, '4324 silver st Ypsilanti MI 48187', 1, 2, 3, true, false);
+INSERT INTO CHECKOUT VALUES (4, '1111 wat st Ypsilanti MI 48187', 1, 2, 3, true, false);
 
 CREATE TABLE Cart_Items
 ( Cart_IDCI			int				  NOT NULL,
-  Product_Name		VARCHAR(100)      NOT NULL,
+  Product_Name		VARCHAR(30)      NOT NULL,
   Product_IDCI      INT       		  NOT NULL,
   
 PRIMARY KEY   (Cart_IDCI), 
 FOREIGN KEY (Product_IDCI) REFERENCES PRODUCT (Product_ID),
 FOREIGN KEY (Cart_IDCI) REFERENCES CART (Cart_ID));
+
+
 
 CREATE TABLE Searches
 ( Term				VarChar(100)	  NOT NULL,
