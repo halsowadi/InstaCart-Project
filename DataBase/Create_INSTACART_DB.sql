@@ -52,15 +52,16 @@ INSERT INTO PRODUCT VALUES (7,'Video Game',1, 'Fallout: New Vegas','video game m
 CREATE TABLE CART
 ( Cart_ID			int				  NOT NULL,
   Customer_IDC	  	INT 			  NOT NULL,
-  Fname           	VARCHAR(25)       NOT NULL,
-  Lname           	VARCHAR(25)       NOT NULL,
   Number_items    	INT 			  NOT NULL,
   Delivery        	BOOlEAN     	  NOT NULL,
   Employee_Discount BOOLEAN			  NOT NULL,
   
 PRIMARY KEY   (Cart_ID), 
 FOREIGN KEY (Customer_IDC) REFERENCES Accounts (Master_ID));
-
+INSERT INTO CART VALUES ('1','1',  '2', false, false);
+INSERT INTO CART VALUES ('2','2',  '2', false, false);
+INSERT INTO CART VALUES ('3','3',  '2', false, false);
+INSERT INTO CART VALUES ('4','4',  '2', false, false);
 
 
 CREATE TABLE CHECKOUT
