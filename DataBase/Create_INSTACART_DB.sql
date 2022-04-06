@@ -49,6 +49,8 @@ INSERT INTO PRODUCT VALUES (4,'Food',1,'Lays Chips','pototeos, GMOS, salt, corn,
 INSERT INTO PRODUCT VALUES (5,'Food',1,'Sun Chips','pototeos, GMOS, salt, corn, startch', 35,5555, 0, 1,5);
 INSERT INTO PRODUCT VALUES (6,'Food',1,'Cookies','sugar, GMOS, salt, corn, startch, flour, choclate', 35,6666, 0, 1,5);
 INSERT INTO PRODUCT VALUES (7,'Video Game',1, 'Fallout: New Vegas','video game made by Bethesda', 35,7777, 0, 1,5);
+INSERT INTO PRODUCT VALUES (8,'Toy',1,'Cat Squishmellow','cotton', 40,8888, 0, 3,4.5);
+INSERT INTO PRODUCT VALUES (9,'Toy',1,'Dog Squishmellow','cotton', 40,9999, 0, 3,4.5);
 CREATE TABLE CART
 ( Cart_ID			int				  NOT NULL,
   Customer_IDC	  	INT 			  NOT NULL,
