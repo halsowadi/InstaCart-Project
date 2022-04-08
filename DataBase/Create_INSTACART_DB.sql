@@ -30,28 +30,22 @@ INSERT INTO Customer VALUES (2,'Joe','Johnson', 313,'1965-05-03','731 Joy st, An
 INSERT INTO Customer VALUES (3,'Hussein','Alsowadi', 313,'1999-01-09','73132 Katherine, Canton MI',1);
 INSERT INTO Customer VALUES (4,'Joe','Johnson', 313,'1965-01-09','73144 Katherine, Canton MI',1);
 CREATE TABLE PRODUCT
-( Product_ID	 	 INT 			  	NOT NULL,
-  Product_type	  	 varchar(30),
-  weight           	 int		     	NOT NULL,
-  product_name       VARCHAR(30)        NOT NULL,
-  Product_materials  VARCHAR(50)     	NOT NULL,
-  stock_Count        INT 	      		NOT NULL,
-  serialnumber       INT(50)  			NOT NULL,
-  Age_req            INT,	 		  
-  Tax         	     INT 				NOT NULL,   
-  Reviews		      DOUBLE, 
+(Product_ID			int			  NOT NULL,
+product_name       VARCHAR(30)        NOT NULL,
+  Product_materials  VARCHAR(50)	  NOT NULL,
+  stock_Count        INT			  NOT NULL,		  
+  Price         	     INT 				NOT NULL,    
   
-PRIMARY KEY   (Product_ID),
-UNIQUE (serialnumber));
-INSERT INTO PRODUCT VALUES (1,'Soap',1,'Dove Soap Bar','soap stuff, chemicals, something that smells good', 2,1111, 0, 3,1.5);
-INSERT INTO PRODUCT VALUES (2,'Soap',1,'Axe Soap Bar ','soap stuff, chemicals, something that smells good', 2,2222, 0, 3,1.5);
-INSERT INTO PRODUCT VALUES (3,'Soap',1,'Johnson&Johnson Soap Bar ','soap stuff, chemicals, something that smells good', 4,3333, 0, 3,4.5);
-INSERT INTO PRODUCT VALUES (4,'Food',1,'Lays Chips','pototeos, GMOS, salt, corn, startch', 40,4444, 0, 1,5);
-INSERT INTO PRODUCT VALUES (5,'Food',1,'Sun Chips','pototeos, GMOS, salt, corn, startch', 35,5555, 0, 1,5);
-INSERT INTO PRODUCT VALUES (6,'Food',1,'Cookies','sugar, GMOS, salt, corn, startch, flour, choclate', 35,6666, 0, 1,5);
-INSERT INTO PRODUCT VALUES (7,'Video Game',1, 'Fallout: New Vegas','video game made by Bethesda', 35,7777, 0, 1,5);
-INSERT INTO PRODUCT VALUES (8,'Toy',1,'Cat Squishmellow','cotton', 40,8888, 0, 3,4.5);
-INSERT INTO PRODUCT VALUES (9,'Toy',1,'Dog Squishmellow','cotton', 40,9999, 0, 3,4.5);
+PRIMARY KEY   (Product_ID));
+INSERT INTO PRODUCT VALUES (1,'Dove Soap Bar','soap stuff, chemicals, something that smells good', 2,  4);
+INSERT INTO PRODUCT VALUES (2,'Axe Soap Bar ','soap stuff, chemicals, something that smells good', 2 , 4);
+INSERT INTO PRODUCT VALUES (3,'Johnson&Johnson Soap Bar ','soap stuff, chemicals, something that smells good', 4,4);
+INSERT INTO PRODUCT VALUES (4,'Lays Chips','pototeos, GMOS, salt, corn, startch', 40, 2);
+INSERT INTO PRODUCT VALUES (5,'Sun Chips','pototeos, GMOS, salt, corn, startch', 35, 1);
+INSERT INTO PRODUCT VALUES (6,'Cookies','sugar, GMOS, salt, corn, startch, flour, choclate', 35,5);
+INSERT INTO PRODUCT VALUES (7,'Fallout: New Vegas','video game made by Bethesda', 35,60);
+INSERT INTO PRODUCT VALUES (8,'Cat Squishmellow','cotton', 40, 10);
+INSERT INTO PRODUCT VALUES (9,'Dog Squishmellow','cotton', 40,10);
 CREATE TABLE CART
 ( Cart_ID			int				  NOT NULL,
   Customer_IDC	  	INT 			  NOT NULL,
@@ -89,7 +83,6 @@ CREATE TABLE Cart_Items
   Product_IDCI      INT       		  NOT NULL,
   
 PRIMARY KEY   (Cart_IDCI), 
-FOREIGN KEY (Product_IDCI) REFERENCES PRODUCT (Product_ID),
 FOREIGN KEY (Cart_IDCI) REFERENCES CART (Cart_ID));
 
 
@@ -101,8 +94,7 @@ CREATE TABLE Searches
   Product_IDS	    INT				  NOT NULL,
   
 PRIMARY KEY   (Customer_IDS), 
-FOREIGN KEY (Customer_IDS) REFERENCES users (id),
-FOREIGN KEY (Product_IDS) REFERENCES PRODUCT (Product_ID));
+FOREIGN KEY (Customer_IDS) REFERENCES users (id));
 
 
 CREATE TABLE Purchases
@@ -112,8 +104,7 @@ CREATE TABLE Purchases
   Item_IDP	    	INT				  NOT NULL,
   
 PRIMARY KEY   (Customer_IDP), 
-FOREIGN KEY (Customer_IDP) REFERENCES users (id),
-FOREIGN KEY (Item_IDP) REFERENCES PRODUCT (Product_ID));
+FOREIGN KEY (Customer_IDP) REFERENCES users (id));
 
 
 
