@@ -13,7 +13,7 @@ if(isset($_POST['add_product'])){
    if(empty($product_name) || empty($product_price) ){
       $message[] = 'please fill out all';
    }else{
-      $insert = "INSERT INTO PRODUCT VALUES('$product_ID','$product_name','$product_matierals', 100 ,'$product_price')";
+      $insert = "INSERT INTO instacart.PRODUCT VALUES('$product_ID','$product_name','$product_matierals', 100 ,'$product_price')";
       $upload = mysqli_query($conn,$insert);
       
       if($upload){
@@ -66,7 +66,7 @@ if(isset($message)){
          <h3>add a new product</h3>
          <input type="text" placeholder="enter product name" name="product_name" class="box">
          <input type="number" placeholder="enter product price" name="product_price" class="box">
-         <input type="number" placeholder="enter product price" name="product_ID" class="box">
+         <input type="number" placeholder="enter product ID" name="product_ID" class="box">
          <input type="submit" class="btn" name="add_product" value="add product">
       </form>
 
