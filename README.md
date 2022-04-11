@@ -14,6 +14,12 @@ This project uses sql, php and html
 
 NOTE:Project is incomplete
 
+Photo Demo:
+
 ![LoginUI](https://user-images.githubusercontent.com/62031371/162801001-033f57cc-74c6-4e70-85fc-70fdb569bec9.jpg)
+
+![ProductPage](https://user-images.githubusercontent.com/62031371/162801156-d435fdac-0a33-4ab6-9cf2-66807b2cb832.jpg)
+
 ![cart1UI](https://user-images.githubusercontent.com/62031371/162801012-ebfb0b4a-31b6-4e4f-90d6-1df848b4bc33.jpg)
+
 ![AdminPage_ADD](https://user-images.githubusercontent.com/62031371/162801033-a121b87e-d44a-4301-80a3-2b0d38d1d439.jpg)
