@@ -1,8 +1,8 @@
 # InstaCart-Project
 cosc 471 database project 
 
-This is a semster long project where the goal was to create a function database and to implement the database to a frontend 
-
+This is a semster long project where the goal was to create a functional database and to implement the database to a frontend 
+This project uses sql, php and html 
 Initializing the Project:
 Required software: Xampp 
 Clone project repo from github 
