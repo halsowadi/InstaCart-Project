@@ -12,5 +12,5 @@ This project uses sql, php and html
 7. Move Frontend folder to Hdocs inside of Xampp file location
 8. Open project in browser, (localhost/Frontend/login.php)
 
-NOTE:Project is incompleted
+NOTE:Project is incomplete
 
