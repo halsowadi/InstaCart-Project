@@ -1,5 +1,6 @@
 # InstaCart-Project
 cosc 471 database project 
+
 This is a semster long project where the goal was to create a function database and to implement the database to a frontend 
 
 Initializing the Project:
