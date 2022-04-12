@@ -10,7 +10,8 @@ This project uses sql, php and html
 4. Launch Apache and Mysql Servers 
 6. Open phpmyadmin in browser and import Create_INSTACART_DB file (inside Database folder from repo)
 7. Move Frontend folder to Hdocs inside of Xampp file location
-8. Open project in browser, (localhost/Frontend/login.php)
+8. Reconfigure configure file to your database host information
+9. Open project in browser, (localhost/Frontend/index.php)
 
 NOTE:Project is incomplete
 
@@ -18,7 +19,7 @@ Photo Demo:
 
 ![LoginUI](https://user-images.githubusercontent.com/62031371/162801001-033f57cc-74c6-4e70-85fc-70fdb569bec9.jpg)
 
-![ProductPage](https://user-images.githubusercontent.com/62031371/162801156-d435fdac-0a33-4ab6-9cf2-66807b2cb832.jpg)
+![store](https://user-images.githubusercontent.com/62031371/163033111-ed375853-5bb8-4d0b-b6a2-5343c0f01c5a.jpg)
 
 ![cart1UI](https://user-images.githubusercontent.com/62031371/162801012-ebfb0b4a-31b6-4e4f-90d6-1df848b4bc33.jpg)
 
